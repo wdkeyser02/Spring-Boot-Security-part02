@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>willydekeyser</groupId>
-    <artifactId>Spring-Boot-Security-part01</artifactId>
+    <artifactId>Spring-Boot-Security-part02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Spring-Boot-Security-part01</name>
     <description>Spring-Boot-Security-part01</description>

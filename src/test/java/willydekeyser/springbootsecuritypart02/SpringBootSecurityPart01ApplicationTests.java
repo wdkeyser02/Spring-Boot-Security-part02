@@ -1,4 +1,4 @@
-package willydekeyser.springbootsecuritypart01;
+package willydekeyser.springbootsecuritypart02;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
