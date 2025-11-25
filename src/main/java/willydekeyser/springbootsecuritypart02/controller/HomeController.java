@@ -9,11 +9,12 @@ import java.security.Principal;
 @RestController
 public class HomeController {
 
+    private String userName = "Anonymous";
+
     @GetMapping("/")
     public String home(Authentication authentication) {
-        String username = "Anonymous";
         if (authentication != null) {
-            username = authentication.getName().toUpperCase();
+            userName = authentication.getName().toUpperCase();
         }
         return ("""
                 <center>
@@ -24,14 +25,13 @@ public class HomeController {
                 <a href='/user'>Private for User</a><br/>
                 <a href='/admin'>Private for Admin</a>
                 </center>
-                """).formatted(username);
+                """).formatted(userName);
     }
 
     @GetMapping("/public")
     public String public_page(Authentication authentication) {
-        String username = "Anonymous";
         if (authentication != null) {
-            username = authentication.getName().toUpperCase();
+            userName = authentication.getName().toUpperCase();
         }
         return ("""
                 <center>
@@ -40,7 +40,7 @@ public class HomeController {
                 <p>Username: %s</p>
                 <a href='/'>Home</a>
                 </center>
-                """).formatted(username);
+                """).formatted(userName);
     }
 
     @GetMapping("/user")
